@@ -1,769 +1,330 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17632072715"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Renda Extra com Decupagem – E‑book prático</title>
+  <meta name="description" content="Transforme sua paixão por artesanato em renda extra. E‑book prático com passo a passo, listas de materiais e modelos editáveis. Oferta de lançamento!" />
+  <!-- OpenGraph -->
+  <meta property="og:title" content="Renda Extra com Decupagem – E‑book prático" />
+  <meta property="og:description" content="Aprenda a lucrar com artesanato e decupagem – mesmo começando do zero. Oferta de lançamento!" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://rendaextracomdecupagem.com.br/og-image.jpg" />
+  <meta property="og:url" content="https://rendaextracomdecupagem.com.br/" />
 
-	  gtag('config', 'AW-17632072715');
-	</script>
-	
-	<!-- Event snippet for Compra conversion page
-	In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-	<script>
-	function gtag_report_conversion(url) {
-	  var callback = function () {
-		if (typeof(url) != 'undefined') {
-		  window.location = url;
-		}
-	  };
-	  gtag('event', 'conversion', {
-		  'send_to': 'AW-17632072715/NPayCLvz3qgbEIuo0NdB',
-		  'value': 1.0,
-		  'currency': 'BRL',
-		  'transaction_id': '',
-		  'event_callback': callback
-	  });
-	  return false;
-	}
-	</script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f172a;            /* slate-900 */
+      --card: #0b1224;          /* darker indigo-slate blend */
+      --muted: #94a3b8;         /* slate-400 */
+      --text: #e2e8f0;          /* slate-200 */
+      --title: #ffffff;         /* white */
+      --brand: #06b6d4;         /* cyan-500 */
+      --brand-600: #0891b2;     /* cyan-600 */
+      --accent: #a78bfa;        /* violet-400 */
+      --success: #22c55e;       /* green-500 */
+      --warning: #fbbf24;       /* amber-400 */
+      --danger: #ef4444;        /* red-500 */
+      --ring: #22d3ee40;        /* cyan-400/25 */
+      --shadow: 0 10px 30px rgba(0,0,0,.35), 0 6px 12px rgba(8,145,178,.15);
+      --radius: 18px;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(1200px 800px at 20% -10%, #0b1224 20%, transparent 60%),
+                  radial-gradient(1000px 700px at 120% 0%, #0a2232 10%, transparent 60%),
+                  var(--bg);
+      color: var(--text);
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .container { width: min(1120px, 92%); margin: 0 auto; }
+    .btn { display: inline-flex; align-items: center; gap: .6rem; padding: 14px 20px; border-radius: 14px; font-weight: 700; letter-spacing: .2px;
+      background: linear-gradient(135deg, var(--brand), var(--accent)); color: #061016; box-shadow: var(--shadow); border: 0; cursor: pointer; }
+    .btn:hover { filter: brightness(1.08); transform: translateY(-1px); transition: .2s; }
+    .btn-outline { background: transparent; color: var(--text); border: 1px solid #2b3a55; }
+    .badge { display:inline-block; padding: 6px 10px; border-radius: 999px; background: #0b2730; color: #a7f3d0; font-weight: 600; border: 1px solid #0b3e4b; }
+    .hero { padding: 60px 0 32px; }
+    .hero-grid { display:grid; grid-template-columns: 1.1fr .9fr; gap: 40px; align-items: center; }
+    .hero h1 { font-size: clamp(30px, 4vw, 52px); color: var(--title); line-height: 1.05; margin: 14px 0; }
+    .hero p.lead { font-size: clamp(16px, 1.9vw, 19px); color: var(--muted); max-width: 700px; }
+    .price-row { display:flex; align-items:end; gap: 12px; margin: 18px 0 6px; }
+    .price { font-size: clamp(28px, 4vw, 42px); font-weight: 800; background: linear-gradient(135deg, #e2e8f0, #a5f3fc); -webkit-background-clip: text; color: transparent; }
+    .anchor-price { color:#94a3b8; text-decoration: line-through; font-weight:600; }
+    .hero-card { background: linear-gradient(180deg, #0b1224, #0a182f); border: 1px solid #1b2b47; border-radius: var(--radius); padding: 22px; box-shadow: var(--shadow); }
+    .hero-list { list-style:none; padding:0; margin:16px 0; display:grid; gap:12px; }
+    .hero-list li { display:flex; gap:10px; align-items:flex-start; }
+    .check { width: 22px; height: 22px; flex:0 0 22px; border-radius: 6px; background: linear-gradient(135deg, #22c55e, #a7f3d0); position: relative; box-shadow: inset 0 0 0 2px #052b1c; }
+    .check::after { content:""; position:absolute; top:4px; left:6px; width:8px; height:12px; border-right:3px solid #052b1c; border-bottom:3px solid #052b1c; transform: rotate(45deg); }
+    .cover { border-radius: 16px; overflow: hidden; border:1px solid #1b2b47; box-shadow: var(--shadow); }
 
+    .section { padding: 56px 0; }
+    .section h2 { font-size: clamp(24px, 3vw, 34px); margin: 0 0 10px; color: #f8fafc; }
+    .section p.sub { color: var(--muted); margin: 0 0 26px; }
+    .grid-3 { display:grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .card { background: var(--card); border:1px solid #1b2b47; border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow); }
+    .card h3 { margin: 6px 0 8px; font-size: 18px; color:#e5e7eb; }
+    .card p { margin:0; color: var(--muted); }
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Renda Extra com Decupagem - Transforme sua Paixão em Lucro!</title>
-    <meta name="description" content="Descubra como ganhar dinheiro com decupagem! Ebook completo para mulheres que querem independência financeira trabalhando de casa.">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎨</text></svg>">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    .summary { display:grid; grid-template-columns: 1.1fr .9fr; gap: 20px; }
+    .summary ul { margin:0; padding-left: 18px; color: var(--text); }
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
+    .testimonials { display:grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .quote { font-style: italic; color:#cbd5e1; }
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+    .pricing { display:grid; grid-template-columns: 1fr .7fr; gap: 24px; align-items: center; }
+    .price-card { background: linear-gradient(180deg, #0a182f, #0b1224); border:1px solid #265078; border-radius: var(--radius); padding: 22px; box-shadow: var(--shadow); }
+    .guarantee { display:flex; gap:14px; align-items:flex-start; background: #052b1c; border:1px solid #0d3a2a; color:#c6f6d5; padding: 14px; border-radius: 14px; }
 
-        /* Header */
-        .header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 20px 0;
-            text-align: center;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
-        }
+    .faq { display:grid; grid-template-columns: 1fr; gap: 12px; }
+    .faq details { background: var(--card); border:1px solid #1b2b47; border-radius: 14px; padding: 14px 16px; }
+    .faq summary { cursor:pointer; font-weight: 600; }
 
-        .logo {
-            font-size: 2rem;
-            font-weight: 800;
-            color: #e74c3c;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
+    .footer { padding: 28px 0 60px; color:#94a3b8; font-size: 14px; }
 
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
-            color: white;
-            padding: 60px 0;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
+    /* Sticky CTA (mobile) */
+    .sticky-cta { position: fixed; left: 0; right: 0; bottom: 0; background: rgba(3,13,19,.75); backdrop-filter: blur(6px); border-top: 1px solid #123243; display: none; }
+    .sticky-cta .inner { display:flex; align-items:center; justify-content: space-between; gap:10px; padding: 10px 16px; }
+    .sticky-cta .btn { padding: 10px 14px; border-radius: 10px; }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-            opacity: 0.3;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-            line-height: 1.2;
-        }
-
-        .hero .subtitle {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 30px;
-            background: rgba(255,255,255,0.2);
-            padding: 15px 30px;
-            border-radius: 50px;
-            display: inline-block;
-            backdrop-filter: blur(10px);
-        }
-
-        /* CTA Button */
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(45deg, #f39c12, #e67e22);
-            color: white;
-            padding: 20px 40px;
-            font-size: 1.3rem;
-            font-weight: 700;
-            text-decoration: none;
-            border-radius: 50px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
-        }
-
-        .cta-button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-            transition: left 0.5s;
-        }
-
-        .cta-button:hover::before {
-            left: 100%;
-        }
-
-        /* Sections */
-        .section {
-            padding: 60px 0;
-            background: white;
-        }
-
-        .section:nth-child(even) {
-            background: #f8f9fa;
-        }
-
-        .section h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 40px;
-            color: #2c3e50;
-        }
-
-        .section p {
-            font-size: 1.1rem;
-            margin-bottom: 20px;
-            text-align: center;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-			color: orange;
-        }
-
-        /* Problem Section */
-        .problem {
-            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-            color: white;
-        }
-
-        .problem h2 {
-            color: #e74c3c;
-        }
-
-        /* Benefits Grid */
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .benefit-card {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .benefit-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .benefit-card i {
-            font-size: 3rem;
-            color: #e74c3c;
-            margin-bottom: 20px;
-        }
-
-        .benefit-card h3 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 15px;
-            color: #2c3e50;
-        }
-
-        /* Testimonials */
-        .testimonials {
-            background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
-            color: white;
-        }
-
-        .testimonial {
-            background: rgba(255,255,255,0.1);
-            padding: 30px;
-            border-radius: 15px;
-            margin: 20px 0;
-            backdrop-filter: blur(10px);
-        }
-
-        .testimonial blockquote {
-            font-size: 1.2rem;
-            font-style: italic;
-            margin-bottom: 15px;
-        }
-
-        .testimonial cite {
-            font-weight: 600;
-            font-size: 1rem;
-        }
-
-        /* Offer Section */
-        .offer {
-            background: linear-gradient(135deg, #00b894 0%, #00a085 100%);
-            color: white;
-            text-align: center;
-        }
-
-        .offer h2 {
-            color: #fdcb6e;
-        }
-
-        .bonus-list {
-            list-style: none;
-            margin: 30px 0;
-        }
-
-        .bonus-list li {
-            background: rgba(255,255,255,0.1);
-            padding: 15px 20px;
-            margin: 10px 0;
-            border-radius: 10px;
-            font-size: 1.1rem;
-            backdrop-filter: blur(10px);
-        }
-
-        .bonus-list li i {
-            color: #fdcb6e;
-            margin-right: 10px;
-        }
-
-        /* Countdown Timer */
-        .countdown {
-            background: #e74c3c;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin: 20px 0;
-            border-radius: 10px;
-        }
-
-        .timer {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 10px;
-        }
-
-        .timer-unit {
-            background: rgba(255,255,255,0.2);
-            padding: 10px 15px;
-            border-radius: 10px;
-            min-width: 60px;
-        }
-
-        /* Guarantee */
-        .guarantee {
-            background: linear-gradient(135deg, #a29bfe 0%, #6c5ce7 100%);
-            color: white;
-            text-align: center;
-        }
-
-        .guarantee-badge {
-            background: #fdcb6e;
-            color: #2d3436;
-            padding: 20px;
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-            margin: 0 auto 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 1.2rem;
-        }
-
-        /* FAQ */
-        .faq-item {
-            background: white;
-            margin: 20px 0;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        .faq-question {
-            background: #2c3e50;
-            color: white;
-            padding: 20px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: background 0.3s ease;
-        }
-
-        .faq-question:hover {
-            background: #34495e;
-        }
-
-        .faq-answer {
-            padding: 20px;
-            display: none;
-        }
-
-        .faq-answer.active {
-            display: block;
-        }
-
-        /* Footer */
-        .footer {
-            background: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 40px 0;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero .subtitle {
-                font-size: 1.2rem;
-                padding: 10px 20px;
-            }
-
-            .cta-button {
-                padding: 15px 30px;
-                font-size: 1.1rem;
-            }
-
-            .section h2 {
-                font-size: 2rem;
-            }
-
-            .timer {
-                flex-wrap: wrap;
-                gap: 10px;
-            }
-        }
-
-        /* Animations */
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-
-        .pulse {
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .fade-in-up {
-            animation: fadeInUp 0.8s ease-out;
-        }
-
-        /* Floating Elements */
-        .floating {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 1000;
-        }
-
-        .floating .cta-button {
-            padding: 15px 25px;
-            font-size: 1rem;
-            border-radius: 25px;
-        }
-
-        /* Sticky Header */
-        .sticky {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 999;
-        }
-    </style>
+    @media (max-width: 980px) {
+      .hero-grid, .summary, .pricing { grid-template-columns: 1fr; }
+      .testimonials, .grid-3 { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 760px) {
+      .hero { padding-top: 30px; }
+      .sticky-cta { display:block; }
+      body { padding-bottom: 78px; }
+    }
+  </style>
 </head>
 <body>
-    <!-- Header -->
-    <header class="header" id="header">
-        <div class="container">
-            <div class="logo">🎨 Renda Extra com Decupagem</div>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content fade-in-up">
-                <h1>Transforme sua Paixão em <span style="color: #fdcb6e;">LUCRO!</span></h1>
-                <p class="subtitle">PARE DE ADIAR SEUS SONHOS! Conquiste sua independência financeira com decupagem</p>
-                <a href="#oferta" class="cta-button pulse">
-                    <i class="fas fa-rocket"></i> QUERO MINHA INDEPENDÊNCIA AGORA!
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Problem Section -->
-    <section class="section problem">
-        <div class="container">
-            <h2>Você se sente presa à rotina?</h2>
-            <p>Você é uma mulher, uma mãe, uma dona de casa... e merece mais do que apenas sobreviver. Você sonha em ter seu próprio dinheiro, em comprar o que quiser sem pedir a ninguém, em ter um hobby que paga suas contas e ainda te realiza?</p>
-            <p><strong>A VERDADE É:</strong> Milhares de mulheres como você estão presas em um ciclo de dependência financeira ou exaustão, sem saber como dar o primeiro passo para mudar essa realidade. Mas e se eu te dissesse que a solução está nas suas mãos, literalmente?</p>
-        </div>
-    </section>
-
-    <!-- Solution Section -->
-    <section class="section">
-        <div class="container">
-            <h2>A Solução que Você Estava Esperando!</h2>
-            <p>O ebook <strong>"RENDA EXTRA COM DECUPAGEM"</strong> é o seu mapa do tesouro para transformar sua criatividade em uma fonte de renda lucrativa!</p>
-            
-            <div class="benefits-grid">
-                <div class="benefit-card fade-in-up">
-                    <i class="fas fa-paint-brush"></i>
-                    <h3>Domine a Arte</h3>
-                    <p>Aprenda decupagem do zero, mesmo sem experiência prévia. Técnicas profissionais explicadas de forma simples.</p>
-                </div>
-                
-                <div class="benefit-card fade-in-up">
-                    <i class="fas fa-home"></i>
-                    <h3>Trabalhe de Casa</h3>
-                    <p>Transforme sua casa em seu ateliê lucrativo, com horários flexíveis que se encaixam na sua vida.</p>
-                </div>
-                
-                <div class="benefit-card fade-in-up">
-                    <i class="fas fa-money-bill-wave"></i>
-                    <h3>Renda Garantida</h3>
-                    <p>Crie peças incríveis e altamente vendáveis que geram desejo e lucro constante.</p>
-                </div>
-                
-                <div class="benefit-card fade-in-up">
-                    <i class="fas fa-crown"></i>
-                    <h3>Seja Sua Própria Chefe</h3>
-                    <p>Conquiste sua independência financeira e o reconhecimento que você merece.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="section testimonials">
-        <div class="container">
-            <h2>O que Nossas Alunas Estão Dizendo</h2>
-            
-            <div class="testimonial fade-in-up">
-                <blockquote>"Eu estava desempregada e sem esperanças. O ebook de decupagem me deu uma nova vida! Hoje, minhas peças são um sucesso e eu sou minha própria chefe."</blockquote>
-                <cite>- Maria S., 45 anos, São Paulo</cite>
-            </div>
-            
-            <div class="testimonial fade-in-up">
-                <blockquote>"Sempre amei artesanato, mas nunca soube como transformar em dinheiro. Este guia é ouro! Minha renda extra já paga todas as minhas contas de casa."</blockquote>
-                <cite>- Ana L., 38 anos, Belo Horizonte</cite>
-            </div>
-            
-            <div class="testimonial fade-in-up">
-                <blockquote>"Em apenas 2 meses seguindo o método, já consegui comprar minha máquina de costura dos sonhos! A decupagem mudou minha vida financeira."</blockquote>
-                <cite>- Carla M., 52 anos, Rio de Janeiro</cite>
-            </div>
-        </div>
-    </section>
-
-    <!-- Offer Section -->
-    <section class="section offer" id="oferta">
-        <div class="container">
-            <h2>Oferta Especial - Por Tempo Limitado!</h2>
-            
-            <div class="countdown">
-                <div>⏰ OFERTA EXPIRA EM:</div>
-                <div class="timer" id="countdown">
-                    <div class="timer-unit">
-                        <div id="hours">23</div>
-                        <div>Horas</div>
-                    </div>
-                    <div class="timer-unit">
-                        <div id="minutes">59</div>
-                        <div>Min</div>
-                    </div>
-                    <div class="timer-unit">
-                        <div id="seconds">59</div>
-                        <div>Seg</div>
-                    </div>
-                </div>
-            </div>
-            
-            <p>Adquira o ebook 'Renda Extra com Decupagem' HOJE e receba <strong>BÔNUS EXCLUSIVOS</strong>:</p>
-            
-                    
-            <div style="margin: 40px 0;">
-                <div style="font-size: 1.2rem; text-decoration: line-through; opacity: 0.7;">De R$ 70,00</div>
-                <div style="font-size: 3rem; font-weight: 800; color: #fdcb6e;">Por apenas R$ 34,90</div>
-                <div style="font-size: 1.1rem;">ou 7x de R$ 5,60 no cartão</div>
-            </div>
-            
-            <a href="#" class="cta-button pulse" onclick="redirectToPayment()">
-                <i class="fas fa-credit-card"></i> GARANTIR MEU E-BOOK AGORA!
-            </a>
-        </div>
-    </section>
-
-    <!-- Guarantee -->
-    <section class="section guarantee">
-        <div class="container">
-            <div class="guarantee-badge">
-                <div>
-                    <i class="fas fa-shield-alt" style="font-size: 2rem; margin-bottom: 10px;"></i><br>
-                    GARANTIA<br>7 DIAS
-                </div>
-            </div>
-            <h2>Risco Zero Para Você!</h2>
-            <p>Temos tanta certeza da qualidade do nosso ebook que oferecemos uma <strong>GARANTIA INCONDICIONAL de 7 DIAS.</strong> Se você não amar o conteúdo ou não sentir que ele é para você, devolvemos 100% do seu dinheiro, sem perguntas. Seu sucesso é nossa prioridade!</p>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="section">
-        <div class="container">
-            <h2>Perguntas Frequentes</h2>
-            
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
-                    <i class="fas fa-question-circle"></i> Preciso ter experiência em artesanato?
-                </div>
-                <div class="faq-answer">
-                    Não! O ebook foi feito especialmente para iniciantes e te ensina tudo do zero, passo a passo.
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
-                    <i class="fas fa-question-circle"></i> Os materiais são caros?
-                </div>
-                <div class="faq-answer">
-                    Não! Mostramos como encontrar materiais acessíveis, fornecedores baratos e até como reciclar materiais que você já tem em casa.
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
-                    <i class="fas fa-question-circle"></i> Consigo conciliar com minhas tarefas de casa?
-                </div>
-                <div class="faq-answer">
-                    Sim! O método é totalmente flexível e se adapta à sua rotina. Você trabalha no seu tempo, sem pressão.
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
-                    <i class="fas fa-question-circle"></i> Quanto tempo leva para ver resultados?
-                </div>
-                <div class="faq-answer">
-                    Muitas alunas começam a vender suas primeiras peças em 15-30 dias seguindo nosso método.
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Final CTA -->
-    <section class="section offer">
-        <div class="container">
-            <h2>Última Chance!</h2>
-            <p>Não deixe essa oportunidade passar. Sua independência financeira está a um clique de distância!</p>
-            <a href="#" class="cta-button pulse" onclick="redirectToPayment()">
-                <i class="fas fa-rocket"></i> SIM, EU QUERO MUDAR MINHA VIDA!
-            </a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 rendaextracomdecupagem.com.br - Todos os direitos reservados.</p>
-            <p>
-                <a href="#" style="color: #74b9ff; text-decoration: none;">Política de Privacidade</a> | 
-                <a href="#" style="color: #74b9ff; text-decoration: none;">Termos de Uso</a>
-            </p>
-        </div>
-    </footer>
-
-    <!-- Floating CTA -->
-    <div class="floating">
-        <a href="#oferta" class="cta-button">
-            <i class="fas fa-arrow-up"></i> GARANTIR AGORA!
-        </a>
+  <!-- Top bar / urgency -->
+  <div class="container" style="padding:10px 0 0;">
+    <div style="display:flex; align-items:center; justify-content:center; gap:10px; flex-wrap:wrap; background: #061a23; border:1px solid #123243; padding:10px 14px; border-radius: 12px;">
+      <span class="badge">Oferta de lançamento</span>
+      <span style="color:#bfdbfe">Preço especial por tempo limitado.</span>
     </div>
+  </div>
 
-    <script>
-        // Sticky Header
-        window.addEventListener('scroll', function() {
-            const header = document.getElementById('header');
-            if (window.scrollY > 100) {
-                header.classList.add('sticky');
-            } else {
-                header.classList.remove('sticky');
-            }
-        });
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="badge">E‑book prático • Passo a passo</span>
+        <h1>Transforme sua paixão em <span style="background:linear-gradient(135deg, var(--brand), var(--accent)); -webkit-background-clip:text; color:transparent">renda extra</span> com decupagem</h1>
+        <p class="lead">Guia direto ao ponto para começar a lucrar com artesanato mesmo do zero: materiais, técnicas essenciais, fornecedores, precificação e modelos prontos para vender.</p>
 
-        // Countdown Timer
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const tomorrow = new Date();
-            tomorrow.setDate(tomorrow.getDate() + 1);
-            tomorrow.setHours(0, 0, 0, 0);
-            const distance = tomorrow.getTime() - now;
+        <div class="price-row">
+          <div class="anchor-price">De R$ 79,00</div>
+          <div class="price">Por R$ 34,90</div>
+        </div>
+        <p style="color:#a7f3d0; font-weight:600; margin:0 0 12px">Pagamento único. Acesso imediato.</p>
 
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        <div style="display:flex; gap:10px; flex-wrap:wrap">
+          <a href="#comprar" class="btn" id="cta-hero">Quero começar agora</a>
+          <a href="#conteudo" class="btn btn-outline">Ver o que tem no e‑book</a>
+        </div>
 
-            document.getElementById('hours').innerHTML = hours.toString().padStart(2, '0');
-            document.getElementById('minutes').innerHTML = minutes.toString().padStart(2, '0');
-            document.getElementById('seconds').innerHTML = seconds.toString().padStart(2, '0');
-        }
+        <ul class="hero-list">
+          <li><span class="check"></span><span>Passo a passo com fotos e checklists de materiais</span></li>
+          <li><span class="check"></span><span>Como precificar e vender (online e local)</span></li>
+          <li><span class="check"></span><span>Modelos de etiquetas e ideias de kits lucrativos</span></li>
+        </ul>
 
-        setInterval(updateCountdown, 1000);
-        updateCountdown();
+        <div class="hero-card" role="note">
+          <strong>Prova e segurança:</strong> garantia de 7 dias. Se não gostar, devolvemos seu dinheiro.
+        </div>
+      </div>
 
-        // FAQ Toggle
-        function toggleFAQ(element) {
-            const answer = element.nextElementSibling;
-            const isActive = answer.classList.contains('active');
-            
-            // Close all FAQ answers
-            document.querySelectorAll('.faq-answer').forEach(item => {
-                item.classList.remove('active');
-            });
-            
-            // Open clicked FAQ if it wasn't active
-            if (!isActive) {
-                answer.classList.add('active');
-            }
-        }
+      <div>
+        <div class="cover">
+          <!-- Substitua por uma imagem mock da capa do e‑book -->
+          <img src="img/Decupagem Lucrativa.png" alt="Capa do e‑book de decupagem" />
+        </div>
+      </div>
+    </div>
+  </section>
 
-        // Smooth Scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
+  <!-- BENEFÍCIOS RÁPIDOS -->
+  <section class="section">
+    <div class="container grid-3">
+      <div class="card">
+        <div class="badge">Rápido</div>
+        <h3>Comece hoje</h3>
+        <p>Lista de materiais enxuta e técnicas simples para já produzir suas primeiras peças.</p>
+      </div>
+      <div class="card">
+        <div class="badge" style="background:#1b1a33; color:#e9d5ff; border-color:#3b2f75">Lucrativo</div>
+        <h3>Preço certo</h3>
+        <p>Método de precificação com planilha e exemplos para não sair no prejuízo.</p>
+      </div>
+      <div class="card">
+        <div class="badge" style="background:#082617; color:#bbf7d0; border-color:#0d3a2a">Vendas</div>
+        <h3>Como vender</h3>
+        <p>Estratégias para anunciar, tirar fotos que vendem e fechar pedidos pelo WhatsApp.</p>
+      </div>
+    </div>
+  </section>
 
-        // Redirect to Payment (placeholder)
-        function redirectToPayment() {
-            // Aqui você colocaria o link real do seu sistema de pagamento
-			gtag_report_conversion('https://app.monetizze.com.br/checkout/PWR340924');
-            //alert('Redirecionando para o pagamento...\n\nEm uma implementação real, aqui seria o link para sua plataforma de pagamento (Hotmart, Monetizze, etc.)');
-            window.location.href = 'https://app.monetizze.com.br/checkout/PWR340924';
-        }
+  <!-- O QUE VOCÊ VAI APRENDER -->
+  <section class="section" id="conteudo">
+    <div class="container summary">
+      <div>
+        <h2>O que você vai aprender</h2>
+        <p class="sub">Tópicos do e‑book organizados para você avançar rápido, sem enrolação.</p>
+        <ul>
+          <li>Materiais essenciais e onde comprar mais barato</li>
+          <li>Preparação da peça, colagem e acabamento perfeito</li>
+          <li>Ideias de produtos que mais vendem no início</li>
+          <li>Precificação na prática + modelo de planilha</li>
+          <li>Fotos que vendem + checklist de publicação</li>
+          <li>Como montar kits e presentear (aumenta o ticket!)</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0">Bônus inclusos</h3>
+        <ul>
+          <li>🎁 12 modelos de etiquetas editáveis (PNG/SVG)</li>
+          <li>🧾 Modelo de planilha de custos e precificação</li>
+          <li>📸 Mini‑guia: fotos com celular que vendem</li>
+        </ul>
+        <div class="guarantee" style="margin-top:14px">
+          <div style="font-weight:800">✓</div>
+          <div>
+            <strong>Garantia incondicional de 7 dias.</strong><br />
+            Se não for para você, devolvemos 100% do valor.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        // Animation on Scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+  <!-- DEPOIMENTOS -->
+  <section class="section" aria-label="Depoimentos">
+    <div class="container">
+      <h2>Quem aplicou, aprovou</h2>
+      <p class="sub">Relatos de quem começou do zero e já está vendendo suas primeiras peças.</p>
+      <div class="testimonials">
+        <div class="card">
+          <p class="quote">“Eu nunca tinha vendido nada. Em duas semanas fiz 6 encomendas de kits para presente. O passo a passo ajudou muito!”</p>
+          <p style="margin-top:10px; color:#e5e7eb"><strong>— Ana Paula</strong></p>
+        </div>
+        <div class="card">
+          <p class="quote">“A parte de precificação salvou! Eu cobrava errado. Agora sei quanto ganho em cada peça.”</p>
+          <p style="margin-top:10px; color:#e5e7eb"><strong>— Bianca L.</strong></p>
+        </div>
+        <div class="card">
+          <p class="quote">“Usei as dicas de foto e comecei a vender pelo Whats. As etiquetas bônus deram um toque profissional.”</p>
+          <p style="margin-top:10px; color:#e5e7eb"><strong>— Camila R.</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in-up');
-                }
-            });
-        }, observerOptions);
 
-        document.querySelectorAll('.benefit-card, .testimonial').forEach(el => {
-            observer.observe(el);
-        });
+  <!-- PERGUNTAS FREQUENTES -->
+  <section class="section">
+    <div class="container">
+      <h2>Perguntas frequentes</h2>
+      <div class="faq">
+        <details>
+          <summary>É para iniciantes?</summary>
+          <p>Sim! O material foi feito para quem está começando. Você vai entender os materiais, técnica base e como vender.</p>
+        </details>
+        <details>
+          <summary>Quanto preciso investir?</summary>
+          <p>Com um kit inicial enxuto você já começa. O e‑book lista opções acessíveis e onde encontrar.</p>
+        </details>
+        <details>
+          <summary>Como recebo o e‑book?</summary>
+          <p>Após o pagamento, você recebe um link de download por e‑mail com acesso imediato.</p>
+        </details>
+        <details>
+          <summary>E se eu não gostar?</summary>
+          <p>Você tem 7 dias de garantia incondicional. É só solicitar que devolvemos 100% do valor.</p>
+        </details>
+      </div>
+    </div>
+  </section>
 
-        // Add some dynamic effects
-        document.addEventListener('DOMContentLoaded', function() {
-            // Add pulse effect to CTA buttons periodically
-            setInterval(() => {
-                document.querySelectorAll('.cta-button').forEach(btn => {
-                    btn.classList.remove('pulse');
-                    setTimeout(() => btn.classList.add('pulse'), 100);
-                });
-            }, 5000);
-        });
-    </script>
+  <!-- PREÇO / COMPRA -->
+  <section class="section" id="comprar" aria-label="Comprar">
+    <div class="container pricing">
+      <div>
+        <h2>Leve agora por <span style="color:#a5f3fc">R$ 34,90</span></h2>
+        <p class="sub">Acesso imediato + atualizações gratuitas desta edição.</p>
+        <ul class="hero-list">
+          <li><span class="check"></span><span>E‑book completo (PDF)</span></li>
+          <li><span class="check"></span><span>Bônus: etiquetas editáveis</span></li>
+          <li><span class="check"></span><span>Planilha de custos & precificação</span></li>
+          <li><span class="check"></span><span>Garantia de 7 dias</span></li>
+        </ul>
+      </div>
+      <div class="price-card">
+        <div class="price-row" style="margin-top:0">
+          <div class="anchor-price">De R$ 79,00</div>
+          <div class="price">R$ 34,90</div>
+        </div>
+        <a class="btn" id="btn-comprar" href="https://SEU_LINK_DE_CHECKOUT_AQUI" target="_blank" rel="noopener">Comprar agora</a>
+        <p style="color:#a7f3d0; font-size:14px; margin:8px 0 0">Pagamento seguro • Cartão • Pix • Boleto</p>
+        <div style="display:flex; gap:10px; align-items:center; margin-top:12px; flex-wrap:wrap">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Pix_Logo.svg" alt="Pix" style="height:20px; filter:brightness(1.4)"/>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg" alt="Visa" style="height:20px; filter:brightness(1.4)"/>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/MasterCard_Logo.svg" alt="Mastercard" style="height:20px; filter:brightness(1.4)"/>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Boleto_Logo.svg" alt="Boleto" style="height:20px; filter:brightness(1.4)"/>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container" style="display:flex; align-items:center; justify-content:space-between; gap: 18px; flex-wrap:wrap">
+      <div>© <span id="year"></span> Marcelo Santos. Todos os direitos reservados.</div>
+      <div style="display:flex; gap: 14px;">
+        <a href="/politica-de-privacidade" style="color:#93c5fd">Política de Privacidade</a>
+        <a href="/termos" style="color:#93c5fd">Termos de Uso</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky CTA (mobile) -->
+  <div class="sticky-cta" role="complementary" aria-label="Barra de compra">
+    <div class="container inner">
+      <div style="font-weight:800">R$ 34,90</div>
+      <a class="btn" href="https://app.monetizze.com.br/checkout/PWR340924" target="_blank" rel="noopener" id="btn-comprar-mobile">Comprar</a>
+    </div>
+  </div>
+
+  <script>
+    // Atualiza ano do rodapé
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Clique de intenção de compra (GA4/Ads) – substitua pelos seus IDs
+    function trackClick(label){
+      // gtag (GA4)
+      if (typeof gtag === 'function') {
+        gtag('event', 'purchase_intent', { label: label });
+      }
+      // dataLayer (Google Ads/Tag Manager)
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: 'purchase_intent', label });
+    }
+    document.getElementById('cta-hero').addEventListener('click', () => trackClick('cta_hero'));
+    document.getElementById('btn-comprar').addEventListener('click', () => trackClick('comprar_desktop'));
+    document.getElementById('btn-comprar-mobile').addEventListener('click', () => trackClick('comprar_mobile'));
+  </script>
+
+  <!-- GA4 (substitua MEU_ID_GA4) -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17632072715"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-17632072715');
+  </script>
+  -->
 </body>
 </html>
